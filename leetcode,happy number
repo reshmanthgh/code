@@ -1,0 +1,17 @@
+class Solution {
+    public boolean isHappy(int n) {
+        if(n==1) return true;
+        int rem;
+        int sum=0;
+        while(n>4){
+            sum =0;
+            while(n!=0){
+                rem=n%10;
+                sum=sum+rem*rem;
+                n=n/10;
+            }
+            n=sum;
+        }
+        return (sum==1);
+    }
+}
